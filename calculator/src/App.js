@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Equal from './components/Equal'
 
 class Calculator extends Component {
   render() {
