@@ -1,29 +1,49 @@
 import React, { Component } from 'react';
 import './App.css';
-import Equal from './components/Equal'
+import { Button } from './components/Button'
+import { Input } from  './components/Input'
 
-class Calculator extends Component {
+class App extends Component {
+  constructor(props){
+    super()
+    this.state = {
+      input: ''
+    }
+
+  }
   render() {
     return (
-      <div className = "numbers">
-          <div class="grid-item">=</div>
-          <div class="grid-item">+</div>
-          <div class="grid-item">-</div>  
-          <div class="grid-item">%</div>
-          <div class="grid-item">*</div>
-          <div class="grid-item">9</div>  
-          <div class="grid-item">8</div>
-          <div class="grid-item">7</div>
-          <div class="grid-item">6</div>  
-          <div class="grid-item">5</div>
-          <div class="grid-item">4</div>
-          <div class="grid-item">3</div> 
-          <div class="grid-item">2</div>
-          <div class="grid-item">1</div>
-          <div class="grid-item">0</div> 
+      <div className= "app">
+        <div className ="calc-wrapper">
+        <Input input={this.state.input}/>
+        <div className="row">
+          <Button>7</Button>
+          <Button>8</Button>
+          <Button>9</Button>
+          <Button>/</Button>
+        </div>
+        <div className="row">
+          <Button>4</Button>
+          <Button>5</Button>
+          <Button>6</Button>
+          <Button>X</Button>
+        </div>
+        <div className="row">
+          <Button>1</Button>
+          <Button>2</Button>
+          <Button>3</Button>
+          <Button>+</Button>
+        </div>
+        <div className="row">
+          <Button>.</Button>
+          <Button>0</Button>
+          <Button>=</Button>
+          <Button>-</Button>
+        </div>
+        </div>
       </div>
     );
   }
 }
 
-export default Calculator;
+export default App;
